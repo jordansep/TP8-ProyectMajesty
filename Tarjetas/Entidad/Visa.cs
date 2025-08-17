@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 public class Visa : TDCredito
 {
     public Visa(string dni, string entidad, string nombres, string apellidos, long nroTarjeta, int codSeg)
-        : base(dni, entidad, nombres, nroTarjeta, codSeg, apellidos)
+        : base(dni, nombres, apellidos, nroTarjeta, codSeg, entidad)
     {
     }
 }

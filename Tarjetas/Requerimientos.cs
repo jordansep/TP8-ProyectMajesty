@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 public class Requerimientos
 {
-    public int numeroOpcion = 
     public static int Opcion(int min = 0, int max = 999999999, string msg = "Ingrese una opcion: ")
     {
         
@@ -16,7 +15,7 @@ public class Requerimientos
             try
             {
                 nroIngresado = int.Parse(Console.ReadLine());
-                if (nroIngresado >= min || nroIngresado <= max) {
+                if (nroIngresado >= min && nroIngresado <= max) {
                     esNumero = true; 
                 }
                 else throw new Exception($"El numero debe estar entre {min}-{max}"); 
