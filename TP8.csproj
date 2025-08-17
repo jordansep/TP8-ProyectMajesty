@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Tarjetas\Entidad\DinnersClub.cs" />
     <Compile Include="Tarjetas\Entidad\Mastercard.cs" />
     <Compile Include="Tarjetas\Requerimientos.cs" />
-    <Compile Include="Tarjetas\TarjetaDeCredito.cs" />
+    <Compile Include="Tarjetas\TDCredito.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tarjetas\Entidad\Visa.cs" />

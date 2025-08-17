@@ -5,23 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 public class Requerimientos
 {
-    private string entidad;
-    private string nroTarjeta;
-    public Requerimientos(string nroTarjeta, string entidad = "")
+    public int numeroOpcion = 
+    public static int Opcion(int min = 0, int max = 999999999, string msg = "Ingrese una opcion: ")
     {
-        this.entidad = entidad;
-        this.nroTarjeta = nroTarjeta;
+        
+        bool esNumero = false;
+        int nroIngresado=0;
+        do {
+            Console.Write(msg);
+            try
+            {
+                nroIngresado = int.Parse(Console.ReadLine());
+                if (nroIngresado >= min || nroIngresado <= max) {
+                    esNumero = true; 
+                }
+                else throw new Exception($"El numero debe estar entre {min}-{max}"); 
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("No se puede ingresar un valor vacío.");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Formato inválido: {ex.Message}");
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine($"Número fuera del rango permitido: {ex.Message}");
+            }
+            catch (Exception ex) {  Console.WriteLine(ex.Message); }
+
+        } while (!esNumero);
+        return nroIngresado;
     }
-    public void EntidadFinanciera()
-    {
-        if (this.nroTarjeta.Contains(15666.ToString()))
-        {
-            this.entidad = "Visa";
-        }
-        else
-        {
-            this.entidad = "Mastercard";
-        }
-    }
-    
 }

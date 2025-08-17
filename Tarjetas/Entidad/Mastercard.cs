@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Mastercard : TarjetadeCredito
+public class Mastercard : TDCredito
 {
-    public Mastercard(string dni, string entidad, string nombres, string apellidos, string nroTarjeta, string codSeg) : base(dni, entidad, nombres, apellidos, nroTarjeta, codSeg)
+    public Mastercard(string dni, string entidad, string nombres, string apellidos, long nroTarjeta, int codSeg) 
+        : base(dni, entidad, nombres, nroTarjeta, codSeg, apellidos)
     {
     }
 }

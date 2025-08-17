@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP8.Tarjetas.Entidad
+public class DinnerClub: TDCredito
 {
-    internal class DinnersClub
+    public DinnerClub(string dni, string entidad, string nombres, string apellidos, long nroTarjeta, int codSeg)
+        : base(dni, entidad, nombres, nroTarjeta, codSeg, apellidos)
     {
     }
 }
