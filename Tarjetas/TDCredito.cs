@@ -18,18 +18,18 @@ public interface IRequerimientos
     void Req9();
     void Req10();
 }
-public class TDCredito : Cliente
+public class TDCredito
 {
     private string entidad;
     private long nroTarjeta;
     private int codSeg;
-    public TDCredito(string dni, string nombres, string apellidos, long nroTarjeta, int codSeg, string entidad) : base(dni, nombres, apellidos)
+    public TDCredito(long nroTarjeta, int codSeg, string entidad)
     {
-        this.entidad = entidad;
         this.nroTarjeta = nroTarjeta;
         this.codSeg = codSeg;
+        this.entidad = entidad;
     }
-    public TDCredito(string dni, string nombres, string apellidos, long nroTarjeta, int codSeg) : base (dni, nombres, apellidos)
+    public TDCredito(long nroTarjeta, int codSeg)
     {
         this.nroTarjeta = nroTarjeta;
         this.codSeg = codSeg;
@@ -58,10 +58,11 @@ public class TDCredito : Cliente
         }
     }
 
+
     // Mostramos los datos de la tarjeta.
     public void MostrarDatos()
     {
-        Console.WriteLine($" Emisor: {this.entidad}\n Dni: {this.dni} | Nombre: {nombres} {this.apellidos}\n Numero: {this.nroTarjeta}\n Codigo de Seguridad: {this.codSeg}");
+        Console.WriteLine($" Emisor: {this.entidad}\n Dni:| Nombre: \n Numero: {this.nroTarjeta}\n Codigo de Seguridad: {this.codSeg}");
     }
 
     // Sistema de uso.
@@ -74,5 +75,6 @@ public class TDCredito : Cliente
     public void Facturas()
     {
         Console.WriteLine("Local: , Productos: ,Fecha: ");
+        string filePath ="";
     }
 }

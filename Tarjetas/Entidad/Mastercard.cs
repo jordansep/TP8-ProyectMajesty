@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 public class Mastercard : TDCredito
 {
-    public Mastercard(string dni, string nombres, string apellidos, long nroTarjeta, int codSeg, string entidad) 
-        : base(dni, nombres, apellidos, nroTarjeta, codSeg, entidad)
+    public Mastercard(long nroTarjeta, int codSeg, string entidad)
+        : base(nroTarjeta, codSeg, entidad)
     {
     }
 }

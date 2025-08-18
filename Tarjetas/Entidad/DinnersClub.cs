@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 public class DinnerClub: TDCredito
 {
-    public DinnerClub(string dni, string entidad, string nombres, string apellidos, long nroTarjeta, int codSeg)
-        : base(dni, entidad, nombres, nroTarjeta, codSeg, apellidos)
+    public DinnerClub(long nroTarjeta, int codSeg, string entidad)
+        : base(nroTarjeta, codSeg, entidad)
     {
     }
 }
